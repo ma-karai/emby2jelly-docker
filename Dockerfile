@@ -39,11 +39,18 @@ RUN rm -rf ~/.cache/pip
 
 # Setup emby2jelly
 
+## setup home folder
 RUN mkdir -p /root/.config/Emby2Jelly/ 
 ENV Emby2Jelly_HOME=/root/.config/Emby2Jelly/
 ARG Emby2Jelly_HOME=/root/.config/Emby2Jelly/
 RUN export Emby2Jelly_HOME
 
+[Emby]
+EMBY_APIKEY = aaaabbbbbbbcccccccccccccdddddddd
+EMBY_URLBASE = http://127.0.0.1:8096/
+[Jelly]
+JELLY_APIKEY = eeeeeeeeeeeeeeeffffffffffffffffggggggggg
+JELLY_URLBASE = http://127.0.0.1:8096/ 
 
 
 RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $Emby2Jelly_HOME && \
@@ -52,5 +59,5 @@ RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $Emby2Je
 #please add requirement txt    
 COPY requirements.txt /root/.config/Emby2Jelly/requirements.txt
 
-RUN pip install -r $Emby2Jelly_HOME/requirements.txt
+#RUN pip install -r $Emby2Jelly_HOME/requirements.txt
 

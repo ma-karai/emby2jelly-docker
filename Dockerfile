@@ -34,3 +34,23 @@ RUN pip install --upgrade pip && pyenv rehash
 
 # Clean
 RUN rm -rf ~/.cache/pip
+
+# Done python3.7 setup
+
+# Setup emby2jelly
+
+RUN mkdir -p /root/.config/Emby2Jelly/ 
+ENV Emby2Jelly_HOME=/root/.config/Emby2Jelly/
+ARG Emby2Jelly_HOME=/root/.config/Emby2Jelly/
+RUN export Emby2Jelly_HOME
+
+
+
+RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $Emby2Jelly_HOME && \
+    rm -rfv $Emby2Jelly_HOME/.git
+    
+#please add requirement txt    
+COPY requirements.txt /root/.config/Emby2Jelly/requirements.txt
+
+RUN pip install -r $Emby2Jelly_HOME/requirements.txt
+

@@ -46,15 +46,13 @@ ARG Emby2Jelly_HOME=/root/.config/Emby2Jelly/
 RUN export Emby2Jelly_HOME
 
 RUN touch $Emby2Jelly_HOME/settings.ini
-RUN echo \
-   "
-   [Emby] 
-   EMBY_APIKEY = aaaabbbbbbbcccccccccccccdddddddd
-   EMBY_URLBASE = http://127.0.0.1:8096/
-   [Jelly]
-   JELLY_APIKEY = eeeeeeeeeeeeeeeffffffffffffffffggggggggg
-   JELLY_URLBASE = http://127.0.0.1:8096/ 
-   " > $Emby2Jelly_HOME/settings.ini
+RUN echo  "[Emby]\n" \
+          "EMBY_APIKEY = aaaabbbbbbbcccccccccccccdddddddd\n"
+          "EMBY_URLBASE = http://127.0.0.1:8096/\n"
+          "[Jelly]\n"
+          "JELLY_APIKEY = eeeeeeeeeeeeeeeffffffffffffffffggggggggg\n"
+          "JELLY_URLBASE = http://127.0.0.1:8096/ \n"
+          > $Emby2Jelly_HOME/settings.ini
 
 RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $Emby2Jelly_HOME && \
     rm -rfv $Emby2Jelly_HOME/.git

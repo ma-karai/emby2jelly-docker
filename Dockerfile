@@ -51,8 +51,7 @@ RUN echo  "[Emby]\n" \
           "EMBY_URLBASE = http://127.0.0.1:8096/\n" \
           "[Jelly]\n" \
           "JELLY_APIKEY = eeeeeeeeeeeeeeeffffffffffffffffggggggggg\n" \
-          "JELLY_URLBASE = http://127.0.0.1:8096/ \n" \
-          > $Emby2Jelly_HOME/settings.ini
+          "JELLY_URLBASE = http://127.0.0.1:8096/ \n" > $Emby2Jelly_HOME/settings.ini
 
 RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $Emby2Jelly_HOME && \
     rm -rfv $Emby2Jelly_HOME/.git

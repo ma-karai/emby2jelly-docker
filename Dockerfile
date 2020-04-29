@@ -65,8 +65,8 @@ ARG NEW_USER_PWD=pls_change_your_pwd
 
     
 #please add proper requirement txt    
-COPY requirements.txt /root/.config/Emby2Jelly/requirements.txt
-COPY settings.ini /root/.config/Emby2Jelly/settings.ini
+COPY requirements.txt $EMBY2JELLY_HOME/requirements.txt
+COPY settings.ini $EMBY2JELLY_HOME/settings.ini
 
 RUN pip install -r $EMBY2JELLY_HOME/requirements.txt
 

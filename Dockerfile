@@ -61,12 +61,12 @@ ENV JELLY_URLBASE=http://127.0.0.2:8096/
 ARG JELLY_URLBASE=http://127.0.0.2:8096/
 
 RUN touch $EMBY2JELLY_HOME/settings.ini
-RUN printf  "[Emby]\n" >> $EMBYJELLY_HOME/settings.ini
-RUN printf  "EMBY_APIKEY = $EMBY_APIKEY\n" >> $EMBYJELLY_HOME/settings.ini
-RUN printf  "EMBY_URLBASE = $EMBY_URLBASE\n" >> $EMBYJELLY_HOME/settings.ini
-RUN printf  "[Jelly]\n" >> $EMBYJELLY_HOME/settings.ini
-RUN printf  "JELLY_APIKEY = $JELLY_APIKEY\n" >> $EMBYJELLY_HOME/settings.ini
-RUN printf  "JELLY_URLBASE = $JELLY_URLBASE\n" >> $EMBYJELLY_HOME/settings.ini
+RUN printf  "[Emby]\n" >> $EMBY2JELLY_HOME/settings.ini
+RUN printf  "EMBY_APIKEY = $EMBY_APIKEY\n" >> $EMBY2JELLY_HOME/settings.ini
+RUN printf  "EMBY_URLBASE = $EMBY_URLBASE\n" >> $EMBY2JELLY_HOME/settings.ini
+RUN printf  "[Jelly]\n" >> $EMBY2JELLY_HOME/settings.ini
+RUN printf  "JELLY_APIKEY = $JELLY_APIKEY\n" >> $EMBY2JELLY_HOME/settings.ini
+RUN printf  "JELLY_URLBASE = $JELLY_URLBASE\n" >> $EMBY2JELLY_HOME/settings.ini
 
 RUN cat $EMBY2JELLY_HOME/settings.ini
     

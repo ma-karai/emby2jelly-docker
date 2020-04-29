@@ -60,6 +60,9 @@ ARG JELLY_APIKEY=eeeeeeeeeeeeeeeffffffffffffffffggggggggg
 ENV JELLY_URLBASE=http://127.0.0.2:8096/
 ARG JELLY_URLBASE=http://127.0.0.2:8096/
 
+ENV NEW_USER_PWD=pls_change_your_pwd
+ARG NEW_USER_PWD=pls_change_your_pwd
+
 RUN touch $EMBY2JELLY_HOME/settings.ini
 RUN printf  "[Emby]\n" >> $EMBY2JELLY_HOME/settings.ini
 RUN printf  "EMBY_APIKEY = $EMBY_APIKEY\n" >> $EMBY2JELLY_HOME/settings.ini

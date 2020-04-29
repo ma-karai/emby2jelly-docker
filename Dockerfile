@@ -72,6 +72,6 @@ RUN cat $EMBY2JELLY_HOME/settings.ini
     
 #please add requirement txt    
 COPY requirements.txt /root/.config/Emby2Jelly/requirements.txt
+RUN pip install -r $EMBY2JELLY_HOME/requirements.txt
 
-#RUN pip install -r $Emby2Jelly_HOME/requirements.txt
 

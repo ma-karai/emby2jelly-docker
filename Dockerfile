@@ -48,14 +48,25 @@ RUN export EMBY2JELLY_HOME
 RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $EMBY2JELLY_HOME
 RUN rm -rfv $EMBY2JELLY_HOME/.git
 
+ENV EMBY_APIKEY=aaaabbbbbbbcccccccccccccdddddddd
+ARG EMBY_APIKEY=aaaabbbbbbbcccccccccccccdddddddd
+
+ENV EMBY_URLBASE=http://127.0.0.1:8096/
+ARG EMBY_URLBASE=http://127.0.0.1:8096/
+
+ENV JELLY_APIKEY=eeeeeeeeeeeeeeeffffffffffffffffggggggggg
+ARG JELLY_APIKEY=eeeeeeeeeeeeeeeffffffffffffffffggggggggg
+
+ENV JELLY_URLBASE=http://127.0.0.2:8096/
+ARG JELLY_URLBASE=http://127.0.0.2:8096/
 
 RUN touch $EMBY2JELLY_HOME/settings.ini
-RUN echo  "[Emby]\n" \
-          "EMBY_APIKEY = aaaabbbbbbbcccccccccccccdddddddd\n" \
-          "EMBY_URLBASE = http://127.0.0.1:8096/\n" \
-          "[Jelly]\n" \
-          "JELLY_APIKEY = eeeeeeeeeeeeeeeffffffffffffffffggggggggg\n" \
-          "JELLY_URLBASE = http://127.0.0.1:8096/ \n" > $EMBYJELLY_HOME/settings.ini
+RUN printf  "[Emby]\n" >> $EMBYJELLY_HOME/settings.ini
+RUN printf  "EMBY_APIKEY = $EMBY_APIKEY\n" >> $EMBYJELLY_HOME/settings.ini
+RUN printf  "EMBY_URLBASE = $EMBY_URLBASE\n" >> $EMBYJELLY_HOME/settings.ini
+RUN printf  "[Jelly]\n" >> $EMBYJELLY_HOME/settings.ini
+RUN printf  "JELLY_APIKEY = $JELLY_APIKEY\n" >> $EMBYJELLY_HOME/settings.ini
+RUN printf  "JELLY_URLBASE = $JELLY_URLBASE\n" >> $EMBYJELLY_HOME/settings.ini
 
 RUN cat $EMBY2JELLY_HOME/settings.ini
     

@@ -41,15 +41,15 @@ RUN rm -rf ~/.cache/pip
 
 ## setup home folder
 RUN mkdir -p /root/.config/Emby2Jelly/ 
-ENV EMBYJELLY_HOME=/root/.config/Emby2Jelly/
-ARG EMBYJELLY_HOME=/root/.config/Emby2Jelly/
-RUN export EMBYJELLY_HOME
+ENV EMBY2JELLY_HOME=/root/.config/Emby2Jelly/
+ARG EMBY2JELLY_HOME=/root/.config/Emby2Jelly/
+RUN export EMBY2JELLY_HOME
 
-RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $EMBYJELLY_HOME
-RUN rm -rfv $Emby2Jelly_HOME/.git
+RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $EMBY2JELLY_HOME
+RUN rm -rfv $EMBY2JELLY_HOME/.git
 
 
-RUN touch $EMBYJELLY_HOME/settings.ini
+RUN touch $EMBY2JELLY_HOME/settings.ini
 RUN echo  "[Emby]\n" \
           "EMBY_APIKEY = aaaabbbbbbbcccccccccccccdddddddd\n" \
           "EMBY_URLBASE = http://127.0.0.1:8096/\n" \
@@ -57,7 +57,7 @@ RUN echo  "[Emby]\n" \
           "JELLY_APIKEY = eeeeeeeeeeeeeeeffffffffffffffffggggggggg\n" \
           "JELLY_URLBASE = http://127.0.0.1:8096/ \n" > $EMBYJELLY_HOME/settings.ini
 
-RUN cat $EMBYJELLY_HOME/settings.ini
+RUN cat $EMBY2JELLY_HOME/settings.ini
     
 #please add requirement txt    
 COPY requirements.txt /root/.config/Emby2Jelly/requirements.txt

@@ -1,10 +1,8 @@
 #!/bin/sh
 echo "execute rewrite settings and begin watchstatus migration"
 
-rm $EMBY2JELLY_HOME/settings.ini
 
 touch $EMBY2JELLY_HOME/settings.ini
-
 printf  "[Emby]\n" >> $EMBY2JELLY_HOME/settings.ini
 printf  "EMBY_APIKEY = $EMBY_APIKEY\n" >> $EMBY2JELLY_HOME/settings.ini
 printf  "EMBY_URLBASE = $EMBY_URLBASE\n" >> $EMBY2JELLY_HOME/settings.ini

@@ -73,6 +73,6 @@ RUN chmod +x  $EMBY2JELLY_HOME/rewritesettings.sh
 
 RUN pip install -r $EMBY2JELLY_HOME/requirements.txt
 
-ENTRYPOINT ["$EMBY2JELLY_HOME/rewritesettings.sh"]
+ENTRYPOINT ["$EMBY2JELLY_HOME/start.sh"]
 
 

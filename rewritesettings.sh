@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "execute rewrite settings and begin watchstatus migration"
+echo "write settings and begin watchstatus migration"
 
 
 touch $EMBY2JELLY_HOME/settings.ini

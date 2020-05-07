@@ -71,6 +71,6 @@ RUN pip install -r $EMBY2JELLY_HOME/requirements.txt
 COPY start.sh $EMBY2JELLY_HOME/start.sh
 RUN chmod +x  $EMBY2JELLY_HOME/start.sh
 
-ENTRYPOINT ["$EMBY2JELLY_HOME/start.sh"]
+#ENTRYPOINT ["$EMBY2JELLY_HOME/start.sh"]
 
 

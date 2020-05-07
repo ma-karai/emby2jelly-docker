@@ -12,5 +12,5 @@ printf  "JELLY_URLBASE = $JELLY_URLBASE\n" >> $EMBY2JELLY_HOME/settings.ini
 
 echo " begin watchstatus migration"
 
-/usr/bin/nohup python3 $EMBY2JELLY_HOME/APImain.py --newuserpwd $NEW_USER_PWD | tee "$EMBY2JELLY_HOME/nohup.out > /proc/1/fd/1 2>/proc/1/fd/2
+/usr/bin/nohup python $EMBY2JELLY_HOME/APImain.py --newuserpwd $NEW_USER_PWD | tee "$EMBY2JELLY_HOME/nohup.out > /proc/1/fd/1 2>/proc/1/fd/2
 

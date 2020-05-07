@@ -60,18 +60,16 @@ ARG JELLY_APIKEY=eeeeeeeeeeeeeeeffffffffffffffffgggggggggtest
 ENV JELLY_URLBASE=http://127.0.0.2:8096/
 ARG JELLY_URLBASE=http://127.0.0.2:8096/
 
-ENV NEW_USER_PWD=pls_change_your_pwd
-ARG NEW_USER_PWD=pls_change_your_pwd
+ENV NEW_USER_PWD=pls_change_your_pwd_test
+ARG NEW_USER_PWD=pls_change_your_pwd_test
 
     
 #please add proper requirement txt    
 COPY requirements.txt $EMBY2JELLY_HOME/requirements.txt
-#COPY settings.ini $EMBY2JELLY_HOME/settings.ini
-
-COPY rewritesettings.sh $EMBY2JELLY_HOME/rewritesettings.sh
-RUN chmod +x  $EMBY2JELLY_HOME/rewritesettings.sh
-
 RUN pip install -r $EMBY2JELLY_HOME/requirements.txt
+
+COPY rewritesettings.sh $EMBY2JELLY_HOME/start.sh
+RUN chmod +x  $EMBY2JELLY_HOME/start.sh
 
 ENTRYPOINT ["$EMBY2JELLY_HOME/start.sh"]
 

@@ -48,14 +48,14 @@ RUN export EMBY2JELLY_HOME
 RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $EMBY2JELLY_HOME
 RUN rm -rfv $EMBY2JELLY_HOME/.git
 
-ENV EMBY_APIKEY=aaaabbbbbbbcccccccccccccdddddddd
-ARG EMBY_APIKEY=aaaabbbbbbbcccccccccccccdddddddd
+ENV EMBY_APIKEY=aaaabbbbbbbcccccccccccccddddddddtest
+ARG EMBY_APIKEY=aaaabbbbbbbcccccccccccccddddddddtest
 
-ENV EMBY_URLBASE=http://127.0.0.1:8096/
-ARG EMBY_URLBASE=http://127.0.0.1:8096/
+ENV EMBY_URLBASE=http://127.0.0.1:8096/test/
+ARG EMBY_URLBASE=http://127.0.0.1:8096/test/
 
-ENV JELLY_APIKEY=eeeeeeeeeeeeeeeffffffffffffffffggggggggg
-ARG JELLY_APIKEY=eeeeeeeeeeeeeeeffffffffffffffffggggggggg
+ENV JELLY_APIKEY=eeeeeeeeeeeeeeeffffffffffffffffgggggggggtest
+ARG JELLY_APIKEY=eeeeeeeeeeeeeeeffffffffffffffffgggggggggtest
 
 ENV JELLY_URLBASE=http://127.0.0.2:8096/
 ARG JELLY_URLBASE=http://127.0.0.2:8096/

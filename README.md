@@ -4,7 +4,8 @@ Easy to use emby 2 jelly docker (use at own risk)
 
 run docker with the following env variables:
 
-```EMBY_APIKEY=aaaabbbbbbbcccccccccccccdddddddd
+```
+   EMBY_APIKEY=aaaabbbbbbbcccccccccccccdddddddd
    EMBY_URLBASE=http://127.0.0.1:8096/
    JELLY_APIKEY=eeeeeeeeeeeeeeeffffffffffffffffggggggggg
    JELLY_URLBASE=http://127.0.0.2:8096/

@@ -68,11 +68,11 @@ ARG NEW_USER_PWD=pls_change_your_pwd
 COPY requirements.txt $EMBY2JELLY_HOME/requirements.txt
 COPY settings.ini $EMBY2JELLY_HOME/settings.ini
 
-#COPY rewritesettings.sh $EMBY2JELLY_HOME/rewritesettings.sh
-#RUN chmod +x  $EMBY2JELLY_HOME/rewritesettings.sh
+COPY rewritesettings.sh $EMBY2JELLY_HOME/rewritesettings.sh
+RUN chmod +x  $EMBY2JELLY_HOME/rewritesettings.sh
 
 RUN pip install -r $EMBY2JELLY_HOME/requirements.txt
 
-#ENTRYPOINT ["$EMBY2JELLY_HOME/rewritesettings.sh"]
+ENTRYPOINT ["$EMBY2JELLY_HOME/rewritesettings.sh"]
 
 

@@ -45,7 +45,7 @@ ENV EMBY2JELLY_HOME=/root/.config/Emby2Jelly/
 ARG EMBY2JELLY_HOME=/root/.config/Emby2Jelly/
 RUN export EMBY2JELLY_HOME
 
-RUN git clone -b docker-friendly --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $EMBY2JELLY_HOME
+RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $EMBY2JELLY_HOME
 RUN rm -rfv $EMBY2JELLY_HOME/.git
 
 ENV EMBY_APIKEY=aaaabbbbbbbcccccccccccccddddddddtest

@@ -10,9 +10,13 @@ printf  "[Jelly] \n" >> $EMBY2JELLY_HOME/settings.ini
 printf  "JELLY_APIKEY = $JELLY_APIKEY\n" >> $EMBY2JELLY_HOME/settings.ini
 printf  "JELLY_URLBASE = $JELLY_URLBASE\n" >> $EMBY2JELLY_HOME/settings.ini
 
-echo "container started pls start migration manually"
+echo "migration should be starting"
 
 /usr/bin/nohup python $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD  
+
+echo "end of file"
+
+
 #2>&1
 #--new-user-pw $NEW_USER_PWD 
 #sleep 0.5

@@ -68,11 +68,11 @@ ARG NEW_USER_PWD=pls_change_your_pwd_test
 COPY requirements.txt $EMBY2JELLY_HOME/requirements.txt
 RUN pip install -r $EMBY2JELLY_HOME/requirements.txt
 
-COPY start.sh /root/start.sh
-RUN chmod +x  /root/start.sh
+COPY start.sh $EMBY2JELLY_HOME/start.sh
+RUN chmod +x  $EMBY2JELLY_HOME/start.sh
 
 
 
-ENTRYPOINT ["/root/start.sh"]
+ENTRYPOINT ["$EMBY2JELLY_HOME/start.sh"]
 
 

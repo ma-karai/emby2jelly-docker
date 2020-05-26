@@ -47,6 +47,7 @@ RUN export EMBY2JELLY_HOME
 
 RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $EMBY2JELLY_HOME
 RUN rm -rfv $EMBY2JELLY_HOME/.git
+RUN chmod +x  $EMBY2JELLY_HOME/APImain.py
 
 ENV EMBY_APIKEY=aaaabbbbbbbcccccccccccccddddddddtest
 ARG EMBY_APIKEY=aaaabbbbbbbcccccccccccccddddddddtest

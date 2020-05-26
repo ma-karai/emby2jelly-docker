@@ -73,6 +73,6 @@ RUN chmod +x  $EMBY2JELLY_HOME/start.sh
 
 
 
-ENTRYPOINT ["$EMBY2JELLY_HOME/start.sh"]
+ENTRYPOINT ["/root/.config/Emby2Jelly/start.sh"]
 
 

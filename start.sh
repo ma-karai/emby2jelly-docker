@@ -14,7 +14,7 @@ echo "migration should be starting"
 
 /usr/bin/nohup python $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD  
 
-echo "end of file"
+echo "end of process"
 
 
 #2>&1

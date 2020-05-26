@@ -12,7 +12,7 @@ printf  "JELLY_URLBASE = $JELLY_URLBASE\n" >> $EMBY2JELLY_HOME/settings.ini
 
 echo "container started pls start migration manually"
 
-#/usr/bin/nohup python $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD  
+/usr/bin/nohup python $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD  
 #2>&1
 #--new-user-pw $NEW_USER_PWD 
 #sleep 0.5

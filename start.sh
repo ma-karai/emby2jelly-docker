@@ -23,7 +23,7 @@ echo "start process manually with"
 echo "docker exec -it emby-to-jelly python3 $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD "
 echo "-----------------------------"
 
-#/usr/bin/nohup -u python $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD 2>&1  
+#/usr/bin/nohup -u python $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD > /root/.config/Emby2Jelly/nohup.out &
 
 #echo "end of process"
 

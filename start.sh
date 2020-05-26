@@ -10,8 +10,15 @@ printf  "[Jelly] \n" >> $EMBY2JELLY_HOME/settings.ini
 printf  "JELLY_APIKEY = $JELLY_APIKEY\n" >> $EMBY2JELLY_HOME/settings.ini
 printf  "JELLY_URLBASE = $JELLY_URLBASE\n" >> $EMBY2JELLY_HOME/settings.ini
 
+echo "-----------------------------"
+echo "$EMBY2JELLY_HOME"
+echo "$EMBY_APIKEY"
+echo "$JELLY_APIKEY"
+echo "$JELLY_URLBASE"
+echo "-----------------------------"
 echo "start process manually with"
 echo "docker exec -it emby-to-jelly python3 $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD "
+echo "-----------------------------"
 
 #/usr/bin/nohup python $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD  
 

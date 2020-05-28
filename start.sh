@@ -2,7 +2,7 @@
 echo "write settings"
 
 touch $EMBY2JELLY_HOME/settings.ini
-touch $EMBY2JELLY_HOME/nohup.out
+
 
 printf  "[Emby]\n" >> $EMBY2JELLY_HOME/settings.ini
 printf  "EMBY_APIKEY = $EMBY_APIKEY\n" >> $EMBY2JELLY_HOME/settings.ini
@@ -17,6 +17,7 @@ touch /root/.config/Emby2Jelly/nohup.out
 echo "---------SET VARS------------"
 echo "-----------------------------"
 echo "$EMBY2JELLY_HOME"
+echo "$EMBY_URLBASE"
 echo "$EMBY_APIKEY"
 echo "$JELLY_APIKEY"
 echo "$JELLY_URLBASE"

@@ -1,8 +1,9 @@
 #!/bin/bash
-echo "write settings "
-
+echo "write settings"
 
 touch $EMBY2JELLY_HOME/settings.ini
+touch $EMBY2JELLY_HOME/nohup.out
+
 printf  "[Emby]\n" >> $EMBY2JELLY_HOME/settings.ini
 printf  "EMBY_APIKEY = $EMBY_APIKEY\n" >> $EMBY2JELLY_HOME/settings.ini
 printf  "EMBY_URLBASE = $EMBY_URLBASE\n" >> $EMBY2JELLY_HOME/settings.ini
@@ -12,6 +13,8 @@ printf  "JELLY_URLBASE = $JELLY_URLBASE\n" >> $EMBY2JELLY_HOME/settings.ini
 
 touch /root/.config/Emby2Jelly/nohup.out
 
+
+echo "---------SET VARS------------"
 echo "-----------------------------"
 echo "$EMBY2JELLY_HOME"
 echo "$EMBY_APIKEY"
@@ -19,15 +22,16 @@ echo "$JELLY_APIKEY"
 echo "$JELLY_URLBASE"
 echo "$NEW_USER_PWD"
 echo "-----------------------------"
-echo "start process manually with"
-echo "docker exec -it emby-to-jelly python3 $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD "
-echo "-----------------------------"
 
-/usr/bin/nohup python3 -u $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD &
 
+
+
+#echo "start process manually with"
+#echo "docker exec -it emby-to-jelly python3 $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD "
+#echo "-----------------------------"
+
+#/usr/bin/nohup python3 -u $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD &
 #echo "end of process"
-
-
 #2>&1
 #--new-user-pw $NEW_USER_PWD 
 #sleep 0.5

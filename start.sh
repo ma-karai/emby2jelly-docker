@@ -16,7 +16,6 @@ touch /root/.config/Emby2Jelly/nohup.out
 
 echo "---------SET VARS------------"
 echo "-----------------------------"
-echo "$EMBY2JELLY_HOME"
 echo "$EMBY_URLBASE"
 echo "$EMBY_APIKEY"
 echo "$JELLY_APIKEY"

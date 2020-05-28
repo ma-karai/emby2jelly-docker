@@ -23,7 +23,7 @@ ARG PYENV_HOME=/root/.pyenv
 RUN export PYENV_HOME
 
 # Install pyenv, then install python versions
-RUN git clone --depth 1 https://github.com/pyenv/pyenv.git $PYENV_HOME && \
+RUN git clone -b docker-friendly --depth 1 https://github.com/pyenv/pyenv.git $PYENV_HOME && \
     rm -rfv $PYENV_HOME/.git
 
 ENV PATH $PYENV_HOME/shims:$PYENV_HOME/bin:$PATH
@@ -69,11 +69,11 @@ ARG NEW_USER_PWD=pls_change_your_pwd_test
 COPY requirements.txt $EMBY2JELLY_HOME/requirements.txt
 RUN pip install -r $EMBY2JELLY_HOME/requirements.txt
 
-COPY start.sh $EMBY2JELLY_HOME/start.sh
-RUN chmod +x  $EMBY2JELLY_HOME/start.sh
+COPY start.sh /root/start.sh
+RUN chmod +x  /root/start.sh
 
 
 
-ENTRYPOINT ["/root/.config/Emby2Jelly/start.sh"]
+ENTRYPOINT ["/root/start.sh"]
 
 

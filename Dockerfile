@@ -23,7 +23,7 @@ ARG PYENV_HOME=/root/.pyenv
 RUN export PYENV_HOME
 
 # Install pyenv, then install python versions
-RUN git clone -b docker-friendly --depth 1 https://github.com/pyenv/pyenv.git $PYENV_HOME && \
+RUN git clone --depth 1 https://github.com/pyenv/pyenv.git $PYENV_HOME && \
     rm -rfv $PYENV_HOME/.git
 
 ENV PATH $PYENV_HOME/shims:$PYENV_HOME/bin:$PATH
@@ -45,7 +45,7 @@ ENV EMBY2JELLY_HOME=/root/.config/Emby2Jelly/
 ARG EMBY2JELLY_HOME=/root/.config/Emby2Jelly/
 RUN export EMBY2JELLY_HOME
 
-RUN git clone --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $EMBY2JELLY_HOME
+RUN git clone -b docker-friendly --depth 1 https://github.com/CobayeGunther/Emby2Jelly.git $EMBY2JELLY_HOME
 RUN rm -rfv $EMBY2JELLY_HOME/.git
 RUN chmod +x  $EMBY2JELLY_HOME/APImain.py
 

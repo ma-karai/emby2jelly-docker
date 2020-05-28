@@ -23,3 +23,9 @@ docker run -e EMBY_APIKEY=aaaabbbbbbbcccccccccccccdddddddd \
            -e NEW_USER_PWD=pls_change_your_pwd_user_123afed makarai/emby2jelly-docker
 
 ```
+
+It should be working perfectly fine now: 
+tested : runcommand
+tested : portainer, and rancher
+
+thanks to https://github.com/Terror-Gene and https://github.com/LLDaLastDon

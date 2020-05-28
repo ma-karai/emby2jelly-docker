@@ -27,6 +27,7 @@ docker run -e EMBY_APIKEY=aaaabbbbbbbcccccccccccccdddddddd \
 It should be working perfectly fine now: 
 
  - tested : runcommand
- - tested : portainer, and rancher
+ - tested : portainer
+ - tested : rancher
 
 thanks to https://github.com/Terror-Gene and https://github.com/LLDaLastDon

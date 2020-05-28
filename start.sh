@@ -24,15 +24,6 @@ echo "$NEW_USER_PWD"
 echo "-----------------------------"
 
 
-
-
-#echo "start process manually with"
-#echo "docker exec -it emby-to-jelly python3 $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD "
-#echo "-----------------------------"
-
-#/usr/bin/nohup python3 -u $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD &
-#echo "end of process"
-#2>&1
-#--new-user-pw $NEW_USER_PWD 
-#sleep 0.5
-#tee "/root/.config/Emby2Jelly/nohup.out > /proc/1/fd/1 2>/proc/1/fd/2
+/usr/bin/nohup python -u $EMBY2JELLY_HOME/APImain.py --new-user-pw $NEW_USER_PWD 2>&1
+sleep 0.5
+tee /root/.config/Emby2Jelly/nohup.out > /proc/1/fd/1 2>/proc/1/fd/2

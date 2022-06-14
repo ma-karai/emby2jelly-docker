@@ -1,6 +1,7 @@
 FROM alpine:latest
 
 #add curl for better handling
+# does it work
 RUN apk add --no-cache curl
 RUN apk add linux-headers 
 # Update & Install dependencies

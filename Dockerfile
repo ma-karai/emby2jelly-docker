@@ -17,7 +17,7 @@ RUN apk add --no-cache --update \
     build-base
 
 # Set Python version
-ARG PYTHON_VERSION='3.7.1'
+ARG PYTHON_VERSION='3.9.9'
 RUN export PYTHON_VERSION
 # Set pyenv home
 ARG PYENV_HOME=/root/.pyenv

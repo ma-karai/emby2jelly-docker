@@ -1,6 +1,2 @@
-json
 requests
-urllib.parse
 configobj
-time
-getpass

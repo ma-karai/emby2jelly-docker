@@ -1,4 +1,4 @@
-# Last Update 2022-06-15
+# Last Update 2022-06-15 - its working again - sorry :)
 
 # emby2jelly-docker
 

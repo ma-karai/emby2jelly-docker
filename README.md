@@ -1,3 +1,5 @@
+# not working at the moment need to wait for upstream fixes
+
 # emby2jelly-docker
 
 Easy to use emby 2 jelly docker (use at own risk)
